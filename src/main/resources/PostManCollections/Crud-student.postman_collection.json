@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "8803be64-63f2-4645-a056-bae23d318738",
+		"name": "Crud-student",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAlllStudents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}students",
+					"host": [
+						"{{url}}students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostStudnet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"genesha\",\r\n    \"age\":\"23\",\r\n    \"rating\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}student",
+					"host": [
+						"{{url}}student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateStudent",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 2,\r\n        \"age\": 51,\r\n        \"name\": \"rajeswari reddy\",\r\n        \"rating\": 5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}student",
+					"host": [
+						"{{url}}student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostStudnets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"name\":\"rrr\",\r\n    \"age\":\"51\",\r\n    \"rating\":\"5\"\r\n},{\r\n    \"name\":\"reddy\",\r\n    \"age\":\"51\",\r\n    \"rating\":\"5\"\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}students",
+					"host": [
+						"{{url}}students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteStudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"genesha\",\r\n    \"age\":\"23\",\r\n    \"rating\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}student?id=5",
+					"host": [
+						"{{url}}student"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:9191/api/"
+		}
+	]
+}
